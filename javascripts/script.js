@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", event => {
   textField.addEventListener("click", event => {
     event.stopPropagation();
     textField.classList.add("focused");
+
+    setInterval(() => {
+      textField.classList.toggle("cursor");
+    }, 500);
   });
 
   document.addEventListener("click", event => {
